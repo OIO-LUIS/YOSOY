@@ -56,13 +56,10 @@ Persona
 Wrd_PwR
 
     #belongs to user
-    WrD_PwR is thesocial part of the system. WrD_PwR, which stands for word power. 
-    Its value determines artistical contributions to the community. 
-    The system’s values are that which expresses inspiration. Word Power allows users 
-    to have access to be creators in the Entertainment service. Its purpose is to inspire to 
-    inspire through art. Entertainment creators have many ways of receiving revenue
+    WrD_PwR is the social part of the system. WrD_PwR, which stands for word power. 
+    Its value determines how reliable a user is. For example, if a user creates a Project, (means that a project was initiated with possible open positions for other users to join) and the creator leaves the project, Wrd_PwR will be reduced, on the contrary if the project is complete a bonus is added to the Wrd_PwR value. Selling good quality items or services also provide better Wrd_PwR. This will be the most important piece of data to maintain unique users. Brainstorm required to find other ways to prevent users from cheating the system by creating other accounts when bad Wrd_PwR is adquired. Methods cannot include real personal data but may include OAUTH from cellphone number OTP && user referals (initial users TBD) 
 
-    rails g model Wrd_PwR score:integer level:integer type:string revenue:integer lastMonthRevenue:integer
+    rails g model Wrd_PwR score:integer level:integer type:string numReports:integer cellphoneNum:string referral:string sucessfulProjects:integer sucessfulServices:integer sucessfulSales:integer communityServiceScore:integer
 
 Profiles
 
