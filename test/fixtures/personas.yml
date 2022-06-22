@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sell_items: false
+  purchase_items: false
+  createProjects: false
+  participate_projects: false
+  create_auctions: false
+  bid_auctions: false
+  provide_service: false
+  book_service: false
+  monitored_transactions: 1
+  is_moderator: false
+  resolved_disputes: 1
+  validate_disputes: false
+  qualified_bonus: 1
+
+two:
+  sell_items: false
+  purchase_items: false
+  createProjects: false
+  participate_projects: false
+  create_auctions: false
+  bid_auctions: false
+  provide_service: false
+  book_service: false
+  monitored_transactions: 1
+  is_moderator: false
+  resolved_disputes: 1
+  validate_disputes: false
+  qualified_bonus: 1

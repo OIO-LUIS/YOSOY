@@ -1,0 +1,2 @@
+json.extract! project, :id, :name, :category, :description, :type, :intitial_cost, :total_cost, :number_members, :member_complexityLevel, :location_city, :location_address, :location_lat, :location_lng, :location_radius, :community_benefit, :community_serviceScore, :target_group, :age_group, :is_artist, :non_profit, :tags, :social_contribution, :complexity_level, :costEffective_score, :overall_score, :comments, :created_at, :updated_at
+json.url project_url(project, format: :json)

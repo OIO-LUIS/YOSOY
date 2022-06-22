@@ -1,0 +1,132 @@
+<div id="<%= dom_id project %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= project.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= project.category %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= project.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Type:</strong>
+    <%= project.type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Intitial cost:</strong>
+    <%= project.intitial_cost %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Total cost:</strong>
+    <%= project.total_cost %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Number members:</strong>
+    <%= project.number_members %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Member complexitylevel:</strong>
+    <%= project.member_complexityLevel %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location city:</strong>
+    <%= project.location_city %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location address:</strong>
+    <%= project.location_address %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location lat:</strong>
+    <%= project.location_lat %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location lng:</strong>
+    <%= project.location_lng %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location radius:</strong>
+    <%= project.location_radius %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Community benefit:</strong>
+    <%= project.community_benefit %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Community servicescore:</strong>
+    <%= project.community_serviceScore %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Target group:</strong>
+    <%= project.target_group %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Age group:</strong>
+    <%= project.age_group %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Is artist:</strong>
+    <%= project.is_artist %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Non profit:</strong>
+    <%= project.non_profit %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tags:</strong>
+    <%= project.tags %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Social contribution:</strong>
+    <%= project.social_contribution %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Complexity level:</strong>
+    <%= project.complexity_level %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Costeffective score:</strong>
+    <%= project.costEffective_score %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Overall score:</strong>
+    <%= project.overall_score %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= project.comments %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this project", project, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this project', edit_project_path(project), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

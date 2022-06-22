@@ -1,0 +1,77 @@
+<div id="<%= dom_id auction %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= auction.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= auction.category %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= auction.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Type:</strong>
+    <%= auction.type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Dimensions:</strong>
+    <%= auction.dimensions %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Weight:</strong>
+    <%= auction.weight %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Image:</strong>
+    <%= auction.image %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Condition:</strong>
+    <%= auction.condition %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Quantity:</strong>
+    <%= auction.quantity %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Manufacturer country:</strong>
+    <%= auction.manufacturer_country %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Initial bid:</strong>
+    <%= auction.initial_bid %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Current bid:</strong>
+    <%= auction.current_bid %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Sold bid:</strong>
+    <%= auction.sold_bid %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= auction.comments %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this auction", auction, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this auction', edit_auction_path(auction), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

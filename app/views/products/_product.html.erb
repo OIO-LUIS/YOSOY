@@ -1,0 +1,77 @@
+<div id="<%= dom_id product %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= product.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= product.category %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= product.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Type:</strong>
+    <%= product.type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tax:</strong>
+    <%= product.tax %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price:</strong>
+    <%= product.price %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Stock:</strong>
+    <%= product.stock %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tags:</strong>
+    <%= product.tags %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Image:</strong>
+    <%= product.image %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Dimensions:</strong>
+    <%= product.dimensions %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Weight:</strong>
+    <%= product.weight %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Reviews:</strong>
+    <%= product.reviews %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Score:</strong>
+    <%= product.score %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Comments:</strong>
+    <%= product.comments %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this product", product, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this product', edit_product_path(product), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
