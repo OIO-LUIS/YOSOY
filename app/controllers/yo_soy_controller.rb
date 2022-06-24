@@ -1,0 +1,2 @@
+class YoSoyController < ApplicationController
+end

@@ -1,39 +1,36 @@
 
 
-
-
-
-<section class="flex justify-center items-center h-screen bg-gray-100">
-    <div class="max-w-md w-full bg-white rounded p-6 space-y-4"> 
+<div class="max-w-md mx-auto bg-purple-200 rounded-xl shadow-md overflow-hidden">
+  <div class="md:flex">
+   <section class="flex justify-center items-center bg-gray-100">
+    <div class="text-sky-900 text-xl max-w-md w-full text-center bg-purple-200 rounded p-6 space-y-4"> 
       <h2>Log in</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="w-full p-4 text-sm bg-orange-900focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Identificador" %>
         </div>
 
-        <div class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
+        <div class="w-full p-4 text-sm bg-orange-900focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña"  %>
         </div>
-
+        <br>
         <% if devise_mapping.rememberable? %>
           <div class="ml-2 text-sm font-normal text-gray-600">
             <%= f.check_box :remember_me %>
             <%= f.label :remember_me %>
           </div>
         <% end %>
-
-        <div class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200">
+        <br>
+        <div class="max-w-md mx-auto text-center py-4 bg-purple-600 hover:bg-purple-900 rounded text-sm font-bold text-white transition duration-200">
           <%= f.submit "Log in" %>
-        </div>
-
-        <div class="ext-sm text-blue-600 hover:underline">
-          <%= render "devise/shared/links" %>
         </div>
 
 
       <% end %>
     </div>
 </section>
+  </div>
+</div>
+
+
