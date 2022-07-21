@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_22_212854) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_21_032245) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,45 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_212854) do
     t.integer "initial_bid"
     t.integer "current_bid"
     t.integer "sold_bid"
+    t.string "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "description"
+    t.string "type"
+    t.string "reviews"
+    t.string "score"
+    t.string "image"
+    t.string "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "description"
+    t.string "type"
+    t.integer "ticket_cost"
+    t.integer "total_cost"
+    t.integer "ticket_quantity"
+    t.string "location_city"
+    t.string "location_address"
+    t.string "location_lat"
+    t.string "location_lng"
+    t.boolean "community_benefit"
+    t.integer "community_serviceScore"
+    t.string "target_group"
+    t.string "age_group"
+    t.boolean "is_artist"
+    t.boolean "non_profit"
+    t.string "tags"
+    t.integer "social_contribution"
+    t.integer "overall_score"
     t.string "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

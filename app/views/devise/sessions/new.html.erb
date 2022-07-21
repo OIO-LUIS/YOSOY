@@ -1,36 +1,52 @@
+<style>
+iframe {
+    z-index : -9999;
+    position: absolute;
+    top : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+</style>
+<iframe src= "https://threejs.org/examples/webgl_interactive_points.html" ></iframe> 
 
 
-<div class="max-w-md mx-auto bg-purple-200 rounded-xl shadow-md overflow-hidden">
+
+<div class="max-w-md mx-auto rounded-xl shadow-md overflow-hidden">
+
   <div class="md:flex">
    <section class="flex justify-center items-center bg-gray-100">
-    <div class="text-sky-900 text-xl max-w-md w-full text-center bg-purple-200 rounded p-6 space-y-4"> 
-      <h2>Log in</h2>
+    <div class="text-black text-shadow-md text-xl max-w-md w-full text-center bg-yellow-600 items-center rounded p-6 space-y-4"> 
+      </div>
+      <br>
+      <p><%= render "devise/shared/links" %></p>
+      <br>
+      <%= image_tag 'againtscorruption.png', class: "mx-auto justify-center", alt: 'LOGO' %>
+      
+      <h2 class="text-red-900 uppercase">Bienvenido</h2>
+      <h2 class="text-red-800 uppercase">ya es hora de evolucionar de este sistema socio economico</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="w-full p-4 text-sm bg-orange-900focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Identificador" %>
+        <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+          <%= f.text_field :email, autofocus: true, placeholder: "Correo electrónico" %>
         </div>
 
-        <div class="w-full p-4 text-sm bg-orange-900focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+        <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
           <%= f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña"  %>
         </div>
         <br>
-        <% if devise_mapping.rememberable? %>
-          <div class="ml-2 text-sm font-normal text-gray-600">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          </div>
-        <% end %>
-        <br>
-        <div class="max-w-md mx-auto text-center py-4 bg-purple-600 hover:bg-purple-900 rounded text-sm font-bold text-white transition duration-200">
-          <%= f.submit "Log in" %>
+        <div class="max-w-md mx-auto text-center py-4 bg-orange-600 hover:bg-orange-900 rounded text-sm font-bold text-white transition duration-200">
+          <%= f.submit "Ingresar" %>
         </div>
-
-
       <% end %>
+      <h2 class="text-red-900 uppercase">la economia del pueblo</h2>
     </div>
 </section>
   </div>
 </div>
 
+
+  
 

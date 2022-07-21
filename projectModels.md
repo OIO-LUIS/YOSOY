@@ -10,15 +10,15 @@ Users
     https://github.com/CanCanCommunity/cancancan
     https://rubydoc.info/github/heartcombo/devise
 
-    #has one atma
-    #has one persona
-    #has one Wrd_PwR
-    #has many profiles
-    #has many meetingLocations
-    #has one subscription
-    #has many products through profile
-    #has many services through profile
-    #has many auctions through profile
+    has_one  :atma
+    has_one  :persona
+    has_one  :wrd_pwr
+    has_many :profiles
+    has_many :meetingLocations
+    has_one  :subscription
+    has_many :products, through: :profile
+    has_many :services, through: :profile
+    has_many :auctions, through: :profile
 
     
     #db fields
@@ -36,7 +36,8 @@ Atma
     complexityLevel, costEffectiveScore, overallScor among other things. 
     Users with certain ATMA score will receive bonifications.
 
-    rails g model atma score:integer level:integer antiquity:integer activity_score:integer community_serviceScore:integer sucessful_projects:integer reactivity_score:integer is_artist:boolean is_creator:boolean ...(TBD)
+    rails g model atma score:integer level:integer antiquity:integer activity_score:integer community_serviceScore:integer sucessful_projects:integer reactivity_score:integer is_artist:boolean is_creator:boolean 
+    ...(TBD)
 
 Persona
 
@@ -85,11 +86,11 @@ Products
     #  Products are items in the marketplace sold at a fixed price
     rails g scaffold Products name:string category:string description:string type:string tax:integer price:integer stock:integer tags:string image:string dimensions:string weight:string reviews:string score:string comments:string 
 
-Services
+Services renamed to Bookings
 
-    #belongs to Users
+    #belongs to Users 
     # Users may book and offer services
-    rails g model Services name:string category:string description:string type:string reviews:string score:string image:string comments:string
+    rails g model Bookings name:string category:string description:string type:string reviews:string score:string image:string comments:string
 
 Auctions
 
@@ -105,4 +106,13 @@ Proyects
 
     #a project can be anything, a shared goal to reach an specific result.
     rails g scaffold Projects name:string category:string description:string type:string intitial_cost:integer total_cost:integer number_members:integer member_complexityLevel:integer location_city:string location_address:string location_lat:string location_lng:string location_radius:integer community_benefit:boolean community_serviceScore:integer target_group:string age_group:string is_artist:boolean non_profit:boolean tags:string social_contribution:integer complexity_level:integer costEffective_score:integer overall_score:integer comments:string
+
+Proyects
+
+    #relationships TBD
+    #events TBD
+
+    rails g scaffold Events name:string category:string description:string type:string ticket_cost:integer total_cost:integer ticket_quantity:integer location_city:string location_address:string location_lat:string location_lng:string community_benefit:boolean community_serviceScore:integer target_group:string age_group:string is_artist:boolean non_profit:boolean tags:string social_contribution:integer overall_score:integer comments:string
+    
+
 

@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  description: MyString
+  type: 
+  ticket_cost: 1
+  total_cost: 1
+  ticket_quantity: 1
+  location_city: MyString
+  location_address: MyString
+  location_lat: MyString
+  location_lng: MyString
+  community_benefit: false
+  community_serviceScore: 1
+  target_group: MyString
+  age_group: MyString
+  is_artist: false
+  non_profit: false
+  tags: MyString
+  social_contribution: 1
+  overall_score: 1
+  comments: MyString
+
+two:
+  name: MyString
+  category: MyString
+  description: MyString
+  type: 
+  ticket_cost: 1
+  total_cost: 1
+  ticket_quantity: 1
+  location_city: MyString
+  location_address: MyString
+  location_lat: MyString
+  location_lng: MyString
+  community_benefit: false
+  community_serviceScore: 1
+  target_group: MyString
+  age_group: MyString
+  is_artist: false
+  non_profit: false
+  tags: MyString
+  social_contribution: 1
+  overall_score: 1
+  comments: MyString

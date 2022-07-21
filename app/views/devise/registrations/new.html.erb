@@ -1,29 +1,106 @@
-<h2>Sign up</h2>
+<style>
+iframe {
+    z-index : -9999;
+    position: absolute;
+    top : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+</style>
+<iframe src= "https://threejs.org/examples/webgl_interactive_points.html" ></iframe> 
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+<div class="max-w-md mx-auto rounded-xl shadow-md overflow-hidden">
+
+  <div class="md:flex">
+   <section class="flex justify-center items-center bg-gray-100">
+    <div class="text-black text-shadow-md text-xl max-w-md w-full text-center bg-yellow-600 items-center rounded p-6 space-y-4"> 
+      
+<!-- Modal toggle -->
+      <button class="block text-white bg-red-700 hover:bg-orange-800 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="button" data-modal-toggle="defaultModal">
+        Conocer más
+      </button>
+
+      <!-- Main modal -->
+      <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+          <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
+                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                          Terms of Service
+                      </h3>
+                      <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="defaultModal">
+                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                      </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-6 space-y-6">
+                      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                          With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                      </p>
+                      <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                          The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                      </p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200">
+                      <button data-modal-toggle="defaultModal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">I accept</button>
+                      <button data-modal-toggle="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+ 
+
+      <br> 
+       <p><%= render "devise/shared/links" %></p>
+      <br>
+      
+      <%= image_tag 'againtscorruption.png', class: "mx-auto justify-center", alt: 'LOGO' %>
+      
+      <h2 class="text-red-900 uppercase">Bienvenido</h2>
+      <h2 class="text-red-800 uppercase">ya es hora de evolucionar de este sistema socio economico</h2>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+            <%= f.email_field :email, autofocus: true, placeholder: "Correo electrónico" %>
+          </div>
+
+          <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+            <%= f.text_field :identity, autofocus: true, placeholder: "Identidad" %>
+          </div>
+
+          <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+         
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> caracteres como mínimo)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña" %>
+          </div>
+
+          <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
+        
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar Contraseña" %>
+          </div>
+          <br>
+          <div class="max-w-md mx-auto text-center py-4 bg-orange-600 hover:bg-orange-900 rounded text-sm font-bold text-white transition duration-200">
+            <%= f.submit "Crear Cuenta" %>
+          </div>
+        <% end %>
+      <h2 class="text-red-900 uppercase">la economia sin piramide</h2>
+    </div>
+</section>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :events
+  resources :bookings
   resources :projects
   resources :auctions
   resources :products
