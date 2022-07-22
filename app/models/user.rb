@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_many :services, through: :profile
   has_many :auctions, through: :profile
 
+  validates_uniqueness_of :email
+  validates_uniqueness_of :identity
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

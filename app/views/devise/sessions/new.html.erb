@@ -1,3 +1,7 @@
+
+
+  
+
 <style>
 iframe {
     z-index : -9999;
@@ -14,19 +18,16 @@ iframe {
 
 
 
-<div class="max-w-md mx-auto rounded-xl shadow-md overflow-hidden">
+<div class="max-w-md mx-auto rounded-xl shadow-md">
 
   <div class="md:flex">
    <section class="flex justify-center items-center bg-gray-100">
-    <div class="text-black text-shadow-md text-xl max-w-md w-full text-center bg-yellow-600 items-center rounded p-6 space-y-4"> 
       </div>
       <br>
-      <p><%= render "devise/shared/links" %></p>
-      <br>
-      <%= image_tag 'againtscorruption.png', class: "mx-auto justify-center", alt: 'LOGO' %>
       
-      <h2 class="text-red-900 uppercase">Bienvenido</h2>
-      <h2 class="text-red-800 uppercase">ya es hora de evolucionar de este sistema socio economico</h2>
+      <h2 class="text-red-900 text-center uppercase">Ingresar con su cuenta</h2>
+
+      </br>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
@@ -41,8 +42,7 @@ iframe {
           <%= f.submit "Ingresar" %>
         </div>
       <% end %>
-      <h2 class="text-red-900 uppercase">la economia del pueblo</h2>
-    </div>
+      <h2 class="text-red-900 text-center uppercase">la economia del pueblo</h2>
 </section>
   </div>
 </div>
