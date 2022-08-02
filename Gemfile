@@ -76,3 +76,6 @@ end
 
 #User Authentication
 gem 'devise'
+
+#File uploader
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'

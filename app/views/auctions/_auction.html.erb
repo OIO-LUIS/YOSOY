@@ -1,12 +1,15 @@
+
+
 <div id="<%= dom_id auction %>">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= auction.name %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Category:</strong>
-    <%= auction.category %>
+
+   <p>
+    <strong>If statement: Foto / Video / Audio:</strong>
+    <video controls width="640" height="480" src="<%= auction.avatar %>"></video>
   </p>
 
   <p class="my-5">
@@ -14,39 +17,10 @@
     <%= auction.description %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Type:</strong>
-    <%= auction.type %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Dimensions:</strong>
-    <%= auction.dimensions %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Weight:</strong>
-    <%= auction.weight %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Image:</strong>
-    <%= auction.image %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Condition:</strong>
-    <%= auction.condition %>
-  </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Quantity:</strong>
     <%= auction.quantity %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Manufacturer country:</strong>
-    <%= auction.manufacturer_country %>
   </p>
 
   <p class="my-5">

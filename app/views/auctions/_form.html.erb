@@ -16,6 +16,11 @@
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
+  <div class="field">
+    <%= form.label :"Video o foto del producto" %>
+    <%= form.file_field :avatar, id: :video_file %>
+  </div>
+
   <div class="my-5">
     <%= form.label :"Descripción" %>
     <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
@@ -31,6 +36,10 @@
     <p>Recuerde que este monto es el mínimo que usted esta dispuesto a recibir.</p>
     <p>Honore su palabra.</p>
     <%= form.number_field :initial_bid, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+   <div class="my-5">
+    <%= form.number_field :user_id, class: "hidden", value:current_user.id %>
   </div>
 
   <div class="inline">
