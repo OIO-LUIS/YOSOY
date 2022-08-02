@@ -75,20 +75,16 @@ iframe {
           </div>
 
           <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
-            <%= f.text_field :identity, autofocus: true, placeholder: "Identidad" %>
-          </div>
-
-          <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
          
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> caracteres como mínimo)</em>
             <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña" %>
+            <%= f.password_field :password, placeholder: "Contraseña" %>
           </div>
 
           <div class="w-full p-4 text-sm bg-orange-100 focus:outline-none border border-sky-900 rounded-xl shadow-md text-orange-900">
         
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar Contraseña" %>
+            <%= f.password_field :password_confirmation, placeholder: "Confirmar Contraseña" %>
           </div>
           <br>
           <div class="max-w-md mx-auto text-center py-4 bg-orange-600 hover:bg-orange-900 rounded text-sm font-bold text-white transition duration-200">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_21_032245) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_02_052525) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,6 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_032245) do
     t.boolean "is_creator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_atmas_on_user_id"
   end
 
   create_table "auctions", force: :cascade do |t|
@@ -45,6 +47,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_21_032245) do
     t.string "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_auctions_on_user_id"
   end
 
   create_table "bookings", force: :cascade do |t|

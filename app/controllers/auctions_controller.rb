@@ -1,5 +1,8 @@
 class AuctionsController < ApplicationController
   before_action :set_auction, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+
+
 
   # GET /auctions or /auctions.json
   def index
@@ -21,6 +24,7 @@ class AuctionsController < ApplicationController
 
   # POST /auctions or /auctions.json
   def create
+    puts "USER ID #{@current_user}"
     @auction = Auction.new(auction_params)
 
     respond_to do |format|

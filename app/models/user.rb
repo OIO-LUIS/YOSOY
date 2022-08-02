@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_one  :subscription
   has_many :products, through: :profile
   has_many :services, through: :profile
-  has_many :auctions, through: :profile
+  has_many :auctions
 
   validates_uniqueness_of :email
   validates_uniqueness_of :identity
