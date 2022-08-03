@@ -81,7 +81,9 @@ test:
 #
 production:
   <<: *default
-  database: yoSoy_production
-  username: yoSoy
-  password: <%= ENV["YOSOY_DATABASE_PASSWORD"] %>
+  host: <%= ENV["YOSOY_DATABASE_HOST"] %>
   url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV["DATABASE_NAME"] %>
+  username: <%= ENV["YOSOY_DATABASE_USER"] %>
+  password: <%= ENV["YOSOY_DATABASE_PASSWORD"] %>
+  port: <%= ENV["YOSOY_DATABASE_PORT"] %>
