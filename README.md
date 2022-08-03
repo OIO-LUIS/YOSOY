@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Strategy and Logic for YoSoy. 
 
-Things you may want to cover:
+Sell, buy, bid and auction items. 
 
-* Ruby version
+All about security (digital), safety(physical), simbiosis(tech and nature) and anonymization(more than blockchain, true untraceability)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Version
+ruby 3.1.2p20
+rails 7.0.3
