@@ -26,11 +26,11 @@ iframe {
 </style>
 <iframe src= "https://threejs.org/examples/webgl_interactive_points.html" ></iframe> 
   <header>
-  <%= render 'yo_soy/header' %>
-  <%= render 'yo_soy/menu' %>
+  <%= render 'yo_soy/header'  %>
+  <%= render 'yo_soy/menu' if user_signed_in?%>
   </header>
   <body>
-    <main class="max-w max-h mx-auto mt-16 px-5 flex bg-red-200">
+    <main class="max-w max-h mx-auto mt-16 px-5 flex">
       <%= yield %>
     </main>
   </body>
