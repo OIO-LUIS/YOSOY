@@ -84,4 +84,4 @@ production:
   database: yoSoy_production
   username: yoSoy
   password: <%= ENV["YOSOY_DATABASE_PASSWORD"] %>
-   url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
