@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_one  :atma
   has_one  :persona
   has_one  :wrd_pwr

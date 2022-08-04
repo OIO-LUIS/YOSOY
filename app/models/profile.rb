@@ -1,3 +1,3 @@
 class Profile < ApplicationRecord
-    belongs_to :user, through: :subcription
+    belongs_to :user
 end
